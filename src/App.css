@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+div {
+  color: white;
+}
+body {
+  background-color: black;
+}
 
 .App-logo {
   height: 40vmin;
