@@ -14,6 +14,7 @@ import {
   NavMobile,
   Socials,
   JoinBtn,
+  ContentLogo,
 } from "./style";
 import { FaBars, FaTimes } from "react-icons/fa";
 // @import resource
@@ -39,12 +40,18 @@ const LandingHeader = () => {
       <LandingMobile isOpened={isOpened}>
         <LandingMobileContent>
           <LandingMobileHeader>
-            <LandingMobileHeaderClose onClick={() => setIsOpened(!isOpened)}>
+            <LandingMobileHeaderClose
+              isOpened={isOpened}
+              onClick={() => setIsOpened(!isOpened)}
+            >
               <FaTimes />
             </LandingMobileHeaderClose>
             <LandingMobileHeaderContent>{"MENU"}</LandingMobileHeaderContent>
           </LandingMobileHeader>
           <LandingMobileActions>
+            <JoinBtn href="https://ee.com" target="_blank">
+              JOIN OUR DISCORD
+            </JoinBtn>
             <LandingLogo>
               <img src={twitter} alt="logo" width="30px" />
             </LandingLogo>
@@ -61,9 +68,9 @@ const LandingHeader = () => {
         <LandingLogo>
           <img src={logo} alt="logo" width="80px" />
         </LandingLogo>
-        <LandingLogo>
+        <ContentLogo>
           <img src={trex} alt="logo" width="350px" />
-        </LandingLogo>
+        </ContentLogo>
 
         <Socials>
           <JoinBtn href="https://ee.com" target="_blank">

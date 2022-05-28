@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const LandingContainer = styled.div``;
 
 export const LandingNav = styled.div`
-  width: 1300px;
+  max-width: 1440px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
+
   @media screen and (max-width: 1400px) {
     width: 90%;
   }
@@ -15,14 +16,26 @@ export const LandingNav = styled.div`
 export const LandingLogo = styled.div`
   cursor: pointer;
 `;
+export const ContentLogo = styled.div`
+  cursor: pointer;
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
+`;
+
 export const Socials = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 450px;
+  margin-top: 20px;
+  @media screen and (max-width: 860px) {
+    display: none;
+  }
 `;
 export const JoinBtn = styled.a`
   width: max-content;
+  padding: 5px;
   display: flex;
   align-items: center;
   background: rgb(247, 193, 67);
@@ -37,6 +50,7 @@ export const NavMobile = styled.div`
   position: fixed;
   right: 25px;
   color: #fff;
+  margin-top: 10px;
   font-size: 28px;
   font-weight: 700;
   background: var(--accent);
@@ -91,13 +105,14 @@ export const LandingMobileHeader = styled.div`
 
 export const LandingMobileHeaderClose = styled.div`
   font-size: 24px;
-  width: 100%;
   text-align: right;
   padding: 0px 25px;
   font-weight: 700;
   color: #fff;
-  position: relative;
-  top: -20px;
+  display: ${(props) => (props.isOpened ? "block" : "none")};
+  position: fixed;
+  top: 20px;
+  right: 20px;
 `;
 
 export const LandingMobileHeaderContent = styled.p`
@@ -112,8 +127,11 @@ export const LandingMobileHeaderContent = styled.p`
 
 export const LandingMobileActions = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
+  & > :not(:last-child) {
+    margin-bottom: 10px;
+  }
 `;
