@@ -13,7 +13,7 @@ const CardImg = styled.img`
 const CardDesc = styled.div`
   margin-top: 20px;
   border: 2px #4e6f8e solid;
-  max-width: 200px;
+  max-width: 250px;
   font-size: 20px;
   padding: 0 15px;
 `;

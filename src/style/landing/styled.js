@@ -8,3 +8,8 @@ export const ContentGrid = styled.div`
   justify-content: center;
   flex-wrap: wrap;
 `;
+export const StyledCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
